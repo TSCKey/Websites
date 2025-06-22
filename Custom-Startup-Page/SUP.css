@@ -1,0 +1,89 @@
+/* Base Styles */
+body {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+.sIcons {
+    height: 10px;
+}
+
+
+.searchContainer {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+
+}
+
+.searchBar{
+  padding: 10px 20px;
+    width: 750px; 
+    height: 35px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 999px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.searchButton {
+    width: 125px;
+    height: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Create a 4x4 grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  grid-gap: 20px;
+  width: 1000px;
+    padding: 50px;
+  margin: 0 auto;
+}
+
+.grid-item {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 175px;
+overflow: hidden;
+background-color: #e0e0e0;
+border: 3px solid #a4a4a4db;
+}
+
+.grid-item:hover {
+  background-color: #d0d0d0;
+  cursor: pointer;
+}
+/*Adjust the images to fit properly within the grid*/
+.imger {
+  height: 125px;
+  object-fit: cover;
+  justify-content: center;
+}
+
+.gif-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.oLetter {
+    align-self: center;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    background-color: #e0e0e0;
+
+}
