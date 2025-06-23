@@ -1,0 +1,85 @@
+
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color:  #cfc4c4; ;
+}
+
+.gameContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    gap: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgb(233, 232, 232);
+}
+.gameHeader{
+    font-size: medium;
+    align-self: center;
+    text-align: center;
+    padding-top: 25px;
+}
+.gameScore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+.gameHeader img{
+    width: 100%;
+    height: 11vh;
+}
+
+.gameMode{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.gameControls{
+    display: grid;
+    justify-items: center;
+    align-self: center;
+    width: 525px;
+    gap: 20px;
+    padding: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.gameControls button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #ef4444; /* Red color */
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 999px;
+}
+.gameControls  button img{
+    width: 75px;
+    height: 75px;
+}
+.gameControls button:hover{
+    background-color: #dc2626; /* Darker red on hover */
+}
+.gameResult{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    padding: 20px;
+}
+
+.gameReset{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
