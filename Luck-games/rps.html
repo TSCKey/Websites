@@ -5,11 +5,13 @@
     <link rel="stylesheet" href="rpsStyles.css"/>
 </head>
 <body>
-    <div class="gameContainer">
+    <div class="mainLayout">
+        <div class="sideBar">
         <div class="gameHeader">
             <img src="Assets/logo.png" alt="Rock Paper Scissors" />
-                    <div class="gameScore">
-            <p>Player Score: <span id="playerScore">0</span>  Computer Score: <span id="computerScore">0</span></p>
+        <div class="gameScore">
+            <div>Player Score: <span id="playerScore">0</span> </div> 
+            <div>Computer Score: <span id="computerScore">0</span></div>
         </div>
             <p>Select the gamemode</p>
             <div class="gameMode">
@@ -17,9 +19,21 @@
                 <button id="bestOfFive">Best Of Five</button>
                 <button id="bestOfSeven">Best Of Seven</button>
             </div>
-            <p>Choose your weapon!</p>
         </div>
+    </div>
+    <div class="gameContainer">
+        
+            <p>Choose your weapon!</p>
 
+        <div class="gameAnimation" id="gameAnimation">
+            <div class="playerChoice">
+                <img id="playerChoiceImage" src="Assets/question-mark.png" alt="Player Choice">
+            </div>
+            <div class="computerChoice">
+                <img id="computerChoiceImage" src="Assets/question-mark.png" alt="Computer Choice">
+            </div>
+
+        </div>
         <div class="gameControls">
             <button id="rock">
                 <img src="Assets/rock.png" alt="Rock">
@@ -28,7 +42,7 @@
                 <img src="Assets/paper.png" alt="Paper">
             </button>
             <button id="scissors">
-                <img src="Assets/scissor.png" alt="Scissors">
+                <img src="Assets/scissors.png" alt="Scissors">
             </button>
         </div>
 
@@ -39,6 +53,8 @@
         <div class="gameReset">
             <button id="resetGame">Reset Game</button>
         </div>
+
+    </div>
 
     </div>
         <script src="scriptrps.js"></script>

@@ -14,7 +14,9 @@ const resetButton = document.getElementById('resetGame');
 const bestOfThreeButton = document.getElementById('bestOfThree');
 const bestOfFiveButton = document.getElementById('bestOfFive');
 const bestOfSevenButton = document.getElementById('bestOfSeven');
-
+const gameAnimation = document.getElementById('gameAnimation');
+const playerChoiceImage = document.getElementById('playerChoiceImage');
+const computerChoiceImage = document.getElementById('computerChoiceImage');
 
 function setBestOfChoice(choice) {
     bestOfChoice = choice;
@@ -77,17 +79,42 @@ function resetGame() {
     bestOfFiveButton.disabled = false;
     bestOfThreeButton.disabled = false;
     bestOfSevenButton.disabled = false;
+
+     rockButton.classList.remove('active');
+     paperButton.classList.remove('active');
+     scissorsButton.classList.remove('active');
+
+    playerChoiceImage.src = 'Assets/question-mark.png';
+    playerChoiceImage.alt = 'Player Choice';
+    computerChoiceImage.src = 'Assets/question-mark.png';
+    computerChoiceImage.alt = 'Computer Choice';
 }
 function setButtonState(choice) {
+    rockButton.classList.remove('active');
+    paperButton.classList.remove('active');
+    scissorsButton.classList.remove('active');
+
+    if (choice === 0) rockButton.classList.add('active');
+    if (choice === 1) paperButton.classList.add('active');
+    if (choice === 2) scissorsButton.classList.add('active');
+
     const playerSelection = choices[choice];
     const computerSelection = getComputerChoice();
+    
+    playerChoiceImage.src = `Assets/${playerSelection}.png`;
+    playerChoiceImage.alt = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1);
+
+    computerChoiceImage.src = `Assets/${computerSelection}.png`;
+    computerChoiceImage.alt = computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1);
     resultDisplay.textContent = playRound(playerSelection, computerSelection);
     updateScores();
     checkWinner();
 }
+
+
 resetButton.addEventListener('click', resetGame);
-rockButton.addEventListener('click', () => { setButtonState(0);});
-paperButton.addEventListener('click', () => { setButtonState(1);});
+rockButton.addEventListener('click', () => { setButtonState(0); });
+paperButton.addEventListener('click', () => { setButtonState(1); });
 scissorsButton.addEventListener('click', () => { setButtonState(2);});
 // Initialize the game
 updateScores();
