@@ -16,8 +16,8 @@
                 // Redirect the user to the Google search page
                 window.location.href = googleSearchUrl;
             } else {
-                // provide feedback if the input is empty
-                alert("Please enter a search query!"); 
+                //redirects to mainpage of the website
+                window.location.href = "https://www.google.com/"
             }
         }
 
@@ -35,8 +35,8 @@
                 // Redirect the user to the YouTube search page
                 window.location.href = youtubeSearchUrl;
             } else {
-                //provide feedback if the input is empty
-                alert("Please enter a search query!");
+                //redirects to mainpage of the website
+                window.location.href = "https://www.youtube.com/"
             }
         }
         function performSearchTiktok() {
@@ -51,8 +51,8 @@
                 // Redirect the user to the TikTok search page
                 window.location.href = tiktokSearchUrl;
             } else {
-                //provide feedback if the input is empty
-                alert("Please enter a search query!");
+                //redirects to mainpage of the website
+                window.location.href = "https://www.tiktok.com/"
             }
         }
 
